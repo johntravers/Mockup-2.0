@@ -1,0 +1,18 @@
+<div class="container test">
+
+
+<p>
+  <%= image_tag(@profile.picture_url, width: 600) if @profile.picture.present? %>
+</p>
+<p class="username">
+  <%= @profile.username %>
+</p>
+
+<p class="biography">
+  <%= @profile.bio %>
+</p>
+</div>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
